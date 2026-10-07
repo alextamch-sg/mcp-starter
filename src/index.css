@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bullish-green: #089981;
+    --bearish-red: #f23645;
+    --tv-blue: #2962ff;
+    --tv-bg: #faf9ff;
+    --tv-card: #ffffff;
+    --tv-border: #e0e3eb;
+    --tv-subtle: #f0f3fa;
+    --tv-text: #131722;
+    --tv-muted: #787b86;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--tv-bg);
+    color: var(--tv-text);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: 'JetBrains Mono', 'Inter', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars matching TradingView */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3c5d8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #787b86;
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.25); color: #089981; }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(242, 54, 69, 0.25); color: #f23645; }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flashGreen 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flash-down {
+  animation: flashRed 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

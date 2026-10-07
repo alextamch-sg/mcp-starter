@@ -1,0 +1,6 @@
+{
+  "name": "Market Precision",
+  "description": "High-velocity global financial markets explorer, interactive charts, sector heatmaps, and technical screening inspired by TradingView.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
